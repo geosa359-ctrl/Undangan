@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#b76e79" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Undangan Pernikahan Alfiyah &amp; Geo Sandi Ardian</title>
+
+    <meta property="og:title" content="Undangan Pernikahan Alfiyah &amp; Geo Sandi Ardian">
+    <meta property="og:description" content="Undangan Pernikahan Alfiyah &amp; Geo Sandi Ardian - Sabtu, 21 Desember 2026 di Samarinda">
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:image" content="image/beatriz-perez-moya-M2T1j-6Fn8w-unsplash.jpg">
+    <meta property="og:url" content="index.html">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&family=Sacramento&display=swap" rel="stylesheet">
+
+    <!-- Bulma & Plugin CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/menikah.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.countdown.css" />
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- FontAwesome & jQuery -->
+    <script src="https://kit.fontawesome.com/2828f7885a.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/jquery.coundown.js"></script>
+    <link rel="icon" type="image/png" href="image/favicon.png" />
+
+    <style>
+      /* DOMINASI PALET WARNA: PINK, PUTIH, & ROSE GOLD (MODERN LUXURY) */
+      :root {
+        --rose-gold: #b76e79;
+        --rose-gold-dark: #8c4a54;
+        --rose-gold-light: #d4a3ab;
+        --soft-pink: #f9ecef;
+        --accent-pink: #e8a5b8;
+        --bright-white: #ffffff;
+        --bg-pink-light: #fcf6f8;
+        --glass-bg: rgba(255, 255, 255, 0.88);
+        --text-dark: #3d2328;
+        --text-muted: #6e4e55;
+        --font-serif: 'Cormorant Garamond', serif;
+        --font-sans: 'Montserrat', sans-serif;
+        --font-script: 'Sacramento', cursive;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: var(--font-sans);
+        color: var(--text-dark);
+        background-color: var(--bg-pink-light);
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+      }
+
+      body.modal-open {
+        overflow: hidden;
+      }
+
+      /* HIASAN & ORNAMEN ASSET PLACEHOLDERS */
+      .ornament-header {
+        max-width: 180px;
+        height: auto;
+        margin: 0 auto 1rem;
+        display: block;
+        transition: transform 0.5s ease;
+      }
+      .ornament-header:hover {
+        transform: scale(1.05);
+      }
+
+      .ornament-divider {
+        max-width: 170px;
+        height: auto;
+        margin: 2rem auto;
+        display: block;
+      }
+
+      /* COVER MODAL OVERLAY (SAMPUL DEPAN PROFESSIONAL) */
+      #cover-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(135deg, rgba(61, 35, 40, 0.72), rgba(183, 110, 121, 0.82)), url('image/beatriz-perez-moya-M2T1j-6Fn8w-unsplash.jpg') center/cover no-repeat;
+        z-index: 99999;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: var(--bright-white);
+        padding: 2rem 1.5rem;
+        transition: opacity 0.8s ease, visibility 0.8s ease;
+        backdrop-filter: blur(3px);
+      }
+
+      #cover-modal.hide {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      /* LINGKARAN FOTO PEMBUKA (COVER) LEBIH BESAR + EFEK GLOWING RING */
+      .cover-avatar-wrapper {
+        position: relative;
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        padding: 6px;
+        background: linear-gradient(135deg, var(--bright-white), var(--rose-gold-light), var(--bright-white));
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35), 0 0 20px rgba(232, 165, 184, 0.6);
+        margin: 0 auto 1.5rem;
+        animation: pulseGlow 3s infinite ease-in-out;
+      }
+
+      .cover-avatar-wrapper img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid var(--bright-white);
+      }
+
+      /* FRAME ORNAMEN OVERLAY BISA DIEDIT/DIGANTI MANUAL */
+      .cover-avatar-frame-asset {
+        position: absolute;
+        top: -12px;
+        left: -12px;
+        width: calc(100% + 24px);
+        height: calc(100% + 24px);
+        pointer-events: none;
+        z-index: 2;
+        object-fit: contain;
+      }
+
+      @keyframes pulseGlow {
+        0%, 100% {
+          box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35), 0 0 20px rgba(232, 165, 184, 0.6);
+        }
+        50% {
+          box-shadow: 0 15px 45px rgba(0, 0, 0, 0.45), 0 0 32px rgba(232, 165, 184, 0.9);
+        }
+      }
+
+      .cover-names {
+        font-family: var(--font-serif);
+        font-size: 2.8rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        margin-bottom: 1.2rem;
+        color: #ffffff;
+        text-shadow: 0 3px 10px rgba(0,0,0,0.5);
+      }
+
+      .btn-open-invitation {
+        background: linear-gradient(135deg, var(--rose-gold), var(--rose-gold-dark));
+        color: var(--bright-white);
+        border: 2px solid var(--bright-white);
+        padding: 0.95rem 2.6rem;
+        font-size: 1.05rem;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        border-radius: 40px;
+        cursor: pointer;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+        transition: all 0.35 ease;
+        margin-top: 1rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+      }
+
+      .btn-open-invitation:hover {
+        background: linear-gradient(135deg, var(--rose-gold-dark), var(--rose-gold));
+        transform: translateY(-4px) scale(1.02);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+      }
+
+      /* FLOATING MUSIC CONTROL MODERN */
+      .music-control {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--rose-gold), var(--rose-gold-dark));
+        color: var(--bright-white);
+        border: 2px solid var(--bright-white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        z-index: 999;
+        box-shadow: 0 6px 20px rgba(183, 110, 121, 0.4);
+        transition: all 0.3s ease;
+      }
+
+      .music-control:hover {
+        transform: scale(1.12) rotate(15deg);
+      }
+
+      .music-control i {
+        font-size: 1.3rem;
+      }
+
+      /* HERO SECTION TEKS WARNA CERAH HIGH CONTRAST */
+      .hero-body .subtitle-walimatul {
+        color: #ffffff !important;
+        font-size: 1.15rem;
+        font-weight: 600;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+        margin-bottom: 0.5rem;
+      }
+
+      .hero-body .title-mempelai {
+        font-family: var(--font-serif);
+        font-size: 3.6rem;
+        font-weight: 700;
+        color: #ffffff !important;
+        text-shadow: 0 4px 12px rgba(0, 0, 0, 0.75);
+        margin: 0.8rem 0;
+      }
+
+      .hero-body .tempatwaktu-cerah {
+        color: #ffffff !important;
+        font-size: 1.2rem;
+        font-weight: 500;
+        line-height: 1.8;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
+      }
+
+      /* JUDUL SEKSI ELEGANT */
+      .section-title {
+        font-family: var(--font-serif);
+        font-size: 2.6rem;
+        font-weight: 700;
+        color: var(--rose-gold-dark);
+        margin-bottom: 0.3rem;
+      }
+
+      .section-subtitle {
+        font-size: 0.95rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--rose-gold);
+        margin-bottom: 2rem;
+        font-weight: 600;
+      }
+
+      /* KARTU PROFIL MEMPELAI - LINGKARAN FOTO FOTO MEMPELAI LEBIH BESAR */
+      .mempelai-card {
+        background: var(--glass-bg);
+        border: 2px solid var(--soft-pink);
+        border-radius: 24px;
+        padding: 3rem 1.8rem;
+        box-shadow: 0 12px 35px rgba(183, 110, 121, 0.1);
+        transition: all 0.4s ease;
+        backdrop-filter: blur(5px);
+        height: 100%;
+      }
+
+      .mempelai-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 18px 45px rgba(183, 110, 121, 0.2);
+        border-color: var(--accent-pink);
+      }
+
+      /* LINGKARAN FOTO TIAP MEMPELAI LEBIH BESAR (200px) */
+      .mempelai-avatar-container {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        margin: 0 auto 1.5rem;
+      }
+
+      .mempelai-avatar {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid var(--rose-gold);
+        padding: 4px;
+        background-color: var(--bright-white);
+        box-shadow: 0 8px 25px rgba(183, 110, 121, 0.25);
+        transition: transform 0.4s ease;
+      }
+
+      .mempelai-card:hover .mempelai-avatar {
+        transform: scale(1.04);
+        border-color: var(--rose-gold-dark);
+      }
+
+      /* FRAME ORNAMEN ANGGUN TEMPAT FOTO MEMPELAI (ASSET DAPAT DIGANTI MANUAL) */
+      .mempelai-avatar-frame-asset {
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        width: calc(100% + 20px);
+        height: calc(100% + 20px);
+        pointer-events: none;
+        z-index: 2;
+        object-fit: contain;
+      }
+
+      .mempelai-nama {
+        font-family: var(--font-serif);
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: var(--rose-gold-dark);
+        margin-bottom: 0.5rem;
+      }
+
+      .mempelai-orangtua {
+        font-size: 1rem;
+        color: var(--text-muted);
+        line-height: 1.7;
+      }
+
+      .ampersand-divider {
+        font-family: var(--font-script);
+        font-size: 4.5rem;
+        color: var(--rose-gold);
+        margin: 1.5rem 0;
+      }
+
+      /* WAKTU ACARA CARDS */
+      .event-card {
+        background: var(--bright-white);
+        border-radius: 20px;
+        padding: 2.5rem 1.8rem;
+        border-top: 6px solid var(--rose-gold);
+        box-shadow: 0 10px 30px rgba(183, 110, 121, 0.08);
+        height: 100%;
+        transition: all 0.35s ease;
+      }
+
+      .event-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 15px 40px rgba(183, 110, 121, 0.18);
+      }
+
+      .event-title {
+        font-family: var(--font-serif);
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--rose-gold-dark);
+        margin-bottom: 0.5rem;
+      }
+
+      /* COUNTDOWN BADGES MODERN */
+      .countdown-badge {
+        display: flex;
+        justify-content: center;
+        gap: 1.2rem;
+        margin-top: 2.2rem;
+        flex-wrap: wrap;
+      }
+
+      .countdown-item {
+        background: rgba(255, 255, 255, 0.95);
+        border: 2px solid var(--soft-pink);
+        padding: 0.9rem 1.4rem;
+        border-radius: 16px;
+        min-width: 80px;
+        text-align: center;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(5px);
+      }
+
+      .countdown-num {
+        font-family: var(--font-serif);
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: var(--rose-gold-dark);
+      }
+
+      .countdown-label {
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        color: var(--text-muted);
+        font-weight: 600;
+      }
+
+      /* GALERI FOTO BERSATU & BINGKAI DEKORATIF MODERN (HANYA GALERI FOTO SAJA) */
+      .gallery-container {
+        margin-top: 2rem;
+      }
+
+      .gallery-frame-wrapper {
+        position: relative;
+        background: var(--bright-white);
+        border-radius: 20px;
+        padding: 12px; /* AREA PADDING SPASI BINGKAI FOTO */
+        border: 2px solid var(--soft-pink);
+        box-shadow: 0 8px 25px rgba(183, 110, 121, 0.12);
+        transition: all 0.4s ease;
+        height: 420px; /* POSISI & PROPORSI GAMBAR GALERI PORTRAIT */
+        aspect-ratio: 3 / 4;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      .gallery-frame-wrapper:hover {
+        transform: translateY(-6px) scale(1.02);
+        box-shadow: 0 16px 40px rgba(183, 110, 121, 0.22);
+        border-color: var(--rose-gold);
+      }
+
+      .gallery-img-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+        overflow: hidden;
+      }
+
+      .gallery-img-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+        transition: transform 0.5s ease;
+      }
+
+      .gallery-frame-wrapper:hover .gallery-img-container img {
+        transform: scale(1.08);
+      }
+
+      /* SLOT BINGKAI ORNAMEN OVERLAY DIGANTI/DIEDIT MANUAL PADA KETIGA ATAU SEMUA FOTO */
+      .gallery-frame-overlay-asset {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 3;
+        object-fit: fill;
+        /* Catatan: Untuk memasang bingkai PNG dari folder asset, ganti opacity atau atur src gambar hiasan */
+      }
+
+      /* AMPLOP DIGITAL DENGAN KARTU TERPISAH KEDUA MEMPELAI */
+      .gift-card {
+        background: var(--bright-white);
+        border-radius: 20px;
+        padding: 2.5rem 1.8rem;
+        border: 2px dashed var(--accent-pink);
+        box-shadow: 0 10px 30px rgba(183, 110, 121, 0.08);
+        text-align: center;
+        height: 100%;
+        transition: all 0.35s ease;
+      }
+
+      .gift-card:hover {
+        transform: translateY(-6px);
+        border-color: var(--rose-gold);
+        box-shadow: 0 15px 40px rgba(183, 110, 121, 0.18);
+      }
+
+      .gift-title {
+        font-family: var(--font-serif);
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: var(--rose-gold-dark);
+        margin-bottom: 0.6rem;
+      }
+
+      .btn-copy {
+        background: var(--soft-pink);
+        color: var(--rose-gold-dark);
+        border: 1px solid var(--accent-pink);
+        padding: 0.6rem 1.5rem;
+        border-radius: 30px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-top: 1rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .btn-copy:hover {
+        background: var(--rose-gold);
+        color: var(--bright-white);
+        border-color: var(--rose-gold);
+        transform: translateY(-2px);
+      }
+
+      /* TOMBOL CUSTOM CTA */
+      .btn-cta-custom {
+        background: linear-gradient(135deg, var(--rose-gold), var(--rose-gold-dark));
+        color: var(--bright-white) !important;
+        border-radius: 35px;
+        padding: 0.85rem 2.2rem;
+        font-weight: 600;
+        border: none;
+        box-shadow: 0 8px 20px rgba(183, 110, 121, 0.3);
+        transition: all 0.35s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+      }
+
+      .btn-cta-custom:hover {
+        background: linear-gradient(135deg, var(--rose-gold-dark), var(--rose-gold));
+        transform: translateY(-3px);
+        box-shadow: 0 12px 28px rgba(183, 110, 121, 0.4);
+      }
+
+      /* RESPONSIVE DESIGN UNTUK HP DAN PC */
+      @media (max-width: 768px) {
+        .cover-avatar-wrapper {
+          width: 170px;
+          height: 170px;
+        }
+        .mempelai-avatar-container {
+          width: 160px;
+          height: 160px;
+        }
+        .cover-names {
+          font-size: 2.2rem;
+        }
+        .hero-body .title-mempelai {
+          font-size: 2.6rem;
+        }
+        .section-title {
+          font-size: 2.1rem;
+        }
+        .gallery-frame-wrapper {
+          height: 360px;
+        }
+        .countdown-item {
+          min-width: 65px;
+          padding: 0.7rem 0.9rem;
+        }
+        .countdown-num {
+          font-size: 1.6rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="modal-open">
+
+    <!-- COVER / SAMPUL DEPAN SEBELUM DIBUKA -->
+    <div id="cover-modal">
+      
+      <!-- SLOT HIASAN ASSET ORNAMEN ATAS SAMPUL -->
+      <!-- Anda dapat mengganti src="image/divider-flower.png" dengan file asset hiasan pilihan Anda secara manual -->
+      <img src="image/divider-flower.png" class="ornament-header" alt="Hiasan Ornamen Bunga"; max-width: 140px; margin-bottom: 0.8rem;">
+
+      <!-- LINGKARAN FOTO PEMBUKA UNDANGAN LEBIH BESAR -->
+      <div class="cover-avatar-wrapper" data-aos="zoom-in">
+        <img src="image/Foto-Sampul.jpeg" alt="Foto Mempelai Alfiyah & Sandi">
+        
+        <!-- SLOT BINGKAI HIASAN OVERLAY PADA FOTO COVER (Manual edit asset PNG jika diperlukan) -->
+        <!-- <img src="image/frame-flower-overlay.png" class="cover-avatar-frame-asset" alt="Bingkai Cover Asset"> -->
+      </div>
+
+      <p class="section-subtitle" style="color: var(--soft-pink); margin-bottom: 0.3rem;">Walimatul 'Ursy</p>
+      <h1 class="cover-names">Alfiyah &amp; Geo Sandi A.</h1>
+      <p style="font-size: 0.95rem; margin-bottom: 1.5rem; letter-spacing: 1px; color: #ffffff;">
+        Kepada Yth. Bapak/Ibu/Saudara/i
+      </p>
+
+      <button class="btn-open-invitation" onclick="openInvitation()">
+        <i class="fas fa-envelope-open"></i> &nbsp; Buka Undangan
+      </button>
+
+      <!-- SLOT HIASAN ASSET ORNAMEN BAWAH SAMPUL -->
+      <img src="image/divider-flowers-leaves.png" class="ornament-divider" alt="Hiasan Ornamen Daun" ; max-width: 120px; margin-top: 1.5rem;">
+    </div>
+
+    <!-- BACKGROUND MUSIC PLAYER -->
+    <audio id="bg-music" loop>
+      <source src="music/menikah.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- FLOATING MUSIC BUTTON -->
+    <div class="music-control" id="music-btn" onclick="toggleMusic()" title="Sound Control">
+      <i class="fas fa-music"></i>
+    </div>
+
+    <!-- PRELOADER -->
+    <div class="preloader-wrapper">
+      <div class="preloader">
+        <img src="image/favicon.png" alt="Flower" />
+      </div>
+    </div>
+
+    <!-- HEADER / HERO SECTION -->
+    <div class="header-wrapper" id="home">
+      <section class="hero is-large">
+        <nav class="navbar is-transparent is-hidden-desktop">
+          <div class="navbar-brand is-fixed-top">
+            <div class="navbar-burger burger" data-target="mobile-nav">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div id="mobile-nav" class="navbar-menu">
+            <div class="navbar-end">
+              <div class="navbar-item"><a class="navbar-item" href="#waktu">Waktu</a></div>
+              <div class="navbar-item"><a class="navbar-item" href="#lokasi">Lokasi</a></div>
+              <div class="navbar-item"><a class="navbar-item" href="#tentang-pasangan">Galeri</a></div>
+              <div class="navbar-item"><a class="navbar-item" href="#amplop-digital">Amplop Digital</a></div>
+              <div class="navbar-item"><a class="navbar-item" href="#rsvp">RSVP</a></div>
+            </div>
+          </div>
+        </nav>
+
+        <div class="hero-body">
+          <div class="container has-text-centered">
+            <!-- SLOT HIASAN ASSET HERO ATAS -->
+            <img src="image/bismillah.png" class="ornament-header" alt="Bismillah" style="filter: brightness(0) invert(1); max-width: 210px; margin-bottom: 1rem;">
+
+            <p class="subtitle-walimatul">Walimatul 'Ursy</p>
+            
+            <!-- WARNA TULISAN CERAH & HIGH CONTRAST -->
+            <h1 class="title-mempelai">Alfiyah &amp; Geo Sandi Ardian</h1>
+            
+            <h4 class="tempatwaktu-cerah">
+              Sabtu, 21 Desember 2026
+              <br />
+              Jl. Kemakmuran, Gg.1, RT.08, No.65, Kel. Sungai Pinang Dalam, Kec. Sungai Pinang
+              <br />
+              Samarinda, Kalimantan Timur
+            </h4>
+
+            <!-- COUNTDOWN TIMER BADGE -->
+            <div class="countdown-badge" id="hitungmundur-custom">
+              <div class="countdown-item">
+                <div class="countdown-num" id="cd-days">00</div>
+                <div class="countdown-label">Hari</div>
+              </div>
+              <div class="countdown-item">
+                <div class="countdown-num" id="cd-hours">00</div>
+                <div class="countdown-label">Jam</div>
+              </div>
+              <div class="countdown-item">
+                <div class="countdown-num" id="cd-minutes">00</div>
+                <div class="countdown-label">Menit</div>
+              </div>
+              <div class="countdown-item">
+                <div class="countdown-num" id="cd-seconds">00</div>
+                <div class="countdown-label">Detik</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="hero-foot">
+          <div class="hero-foot--wrapper">
+            <div class="columns">
+              <div class="column is-12 hero-menu-desktop has-text-centered">
+                <ul>
+                  <li class="is-active"><a href="#home">Home</a></li>
+                  <li><a href="#waktu">Waktu</a></li>
+                  <li><a href="#lokasi">Lokasi</a></li>
+                  <li><a href="#tentang-pasangan">Galeri</a></li>
+                  <li><a href="#amplop-digital">Amplop Digital</a></li>
+                  <li><a href="#rsvp">RSVP</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      
+      <!-- SECTION PEMBUKA & PROFIL PASANGAN -->
+      <section class="section-light regular-section has-text-centered" id="regular-section" style="padding-top: 4.5rem;">
+        
+        <!-- SLOT HIASAN ASSET ORNAMEN PEMBUKA -->
+        <div data-aos="fade-up">
+          <img src="image/bismillah.png" class="bismillah has-text-centered" alt="Bismillahirrahmaanirrahiim" style="max-width: 230px; margin-bottom: 1.5rem;">
+        </div>
+
+        <p class="bodytext" data-aos="fade-up" style="max-width: 700px; margin: 0 auto 2.8rem; line-height: 1.85; color: var(--text-muted); font-size: 1.05rem;">
+          Assalamu'alaikum Warahmatullahi Wabarakatuh.
+          <br />
+          Maha Suci Allah SWT yang telah menciptakan makhluk-Nya berpasang-pasangan.
+          Dengan memohon rahmat dan ridha-Nya, kami bermaksud mengundang Bapak/Ibu/Saudara/Saudari pada acara pernikahan kami:
+        </p>
+
+        <!-- KARTU PROFIL KEDUA MEMPELAI -->
+        <div class="container mempelai-container" data-aos="fade-up">
+          <div class="columns is-vcentered is-centered">
+            
+            <!-- MEMPELAI WANITA -->
+            <div class="column is-5">
+              <div class="mempelai-card">
+                <!-- LINGKARAN FOTO MEMPELAI LEBIH BESAR (200px) -->
+                <div class="mempelai-avatar-container">
+                  <img src="image/Alfiyah.jpeg" alt="Foto Alfiyah" class="mempelai-avatar">
+                  
+                  <!-- SLOT BINGKAI ORNAMEN ASSET MEMPELAI WANITA (Bisa diisi file PNG bingkai manual) -->
+                  <!-- <img src="image/frame-mempelai-female.png" class="mempelai-avatar-frame-asset" alt="Bingkai Hiasan Wanita"> -->
+                </div>
+
+                <div class="mempelai-nama">Alfiyah, S.Pd</div>
+                <div class="mempelai-orangtua">
+                  Putri tercinta dari:<br>
+                  <strong>Bapak Wahid</strong> &amp; <strong>Ibu Hayati</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- SIMBOL DAN (&) -->
+            <div class="column is-2 ampersand-divider">
+              &amp;
+            </div>
+
+            <!-- MEMPELAI PRIA -->
+            <div class="column is-5">
+              <div class="mempelai-card">
+                <!-- LINGKARAN FOTO MEMPELAI LEBIH BESAR (200px) -->
+                <div class="mempelai-avatar-container">
+                  <img src="image/Sandi.jpeg" alt="Foto Geo Sandi" class="mempelai-avatar">
+                  
+                  <!-- SLOT BINGKAI ORNAMEN ASSET MEMPELAI PRIA (Bisa diisi file PNG bingkai manual) -->
+                  <!-- <img src="image/frame-mempelai-male.png" class="mempelai-avatar-frame-asset" alt="Bingkai Hiasan Pria"> -->
+                </div>
+
+                <div class="mempelai-nama">Geo Sandi Ardian, S.Pd</div>
+                <div class="mempelai-orangtua">
+                  Putra tercinta dari:<br>
+                  <strong>Bapak Damin</strong> &amp; <strong>Ibu Anik Suminem</strong>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- SLOT HIASAN ASSET PEMBATAS SECTION -->
+        <div style="margin-top: 3.5rem;" data-aos="fade-up">
+          <img src="image/divider-leaves.png" class="ornament-divider" alt="Hiasan Pembatas">
+        </div>
+      </section>
+
+      <!-- SECTION WAKTU ACARA -->
+      <section class="section-dark" id="waktu" style="padding: 4.5rem 1.5rem; background: var(--bright-white);">
+        <div class="container text-center has-text-centered">
+          <div data-aos="fade-up">
+            <!-- SLOT HIASAN ASSET WAKTU -->
+            <img src="image/divider-flower.png" class="ornament-header" alt="Hiasan Bunga" style="max-width: 130px;">
+            <h2 class="section-title">Waktu Acara</h2>
+            <p class="section-subtitle">Save The Date</p>
+          </div>
+
+          <div class="columns is-centered" data-aos="fade-up" style="margin-top: 1rem;">
+            <div class="column is-5">
+              <div class="event-card">
+                <i class="far fa-heart" style="font-size: 2.4rem; color: var(--rose-gold); margin-bottom: 1rem;"></i>
+                <h3 class="event-title">Akad Nikah</h3>
+                <p style="color: var(--rose-gold-dark); font-weight: 600; margin-bottom: 0.5rem; font-size: 1.1rem;">Sabtu, 21 Desember 2026</p>
+                <p style="color: var(--text-muted); font-size: 0.98rem;">Pukul 09.00 WITA - Selesai</p>
+              </div>
+            </div>
+
+            <div class="column is-5">
+              <div class="event-card">
+                <i class="fas fa-glass-cheers" style="font-size: 2.4rem; color: var(--rose-gold); margin-bottom: 1rem;"></i>
+                <h3 class="event-title">Resepsi Pernikahan</h3>
+                <p style="color: var(--rose-gold-dark); font-weight: 600; margin-bottom: 0.5rem; font-size: 1.1rem;">Sabtu, 21 Desember 2026</p>
+                <p style="color: var(--text-muted); font-size: 0.98rem;">Pukul 10.00 - 17.00 WITA</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION LOKASI -->
+      <section class="section-darker" id="lokasi" style="padding: 4.5rem 1.5rem;">
+        <div class="container has-text-centered">
+          <div data-aos="fade-up">
+            <h2 class="section-title">Lokasi Acara</h2>
+            <p class="section-subtitle">Denah &amp; Peta Lokasi</p>
+            <p class="tempat is-larger" style="margin-bottom: 2rem; color: var(--text-dark); line-height: 1.8;">
+              <strong>Kediaman Mempelai</strong><br>
+              Jl. Kemakmuran, Gg.1, RT.08, No.65, Kel. Sungai Pinang Dalam, Kec. Sungai Pinang, Samarinda
+            </p>
+          </div>
+
+          <div class="section-map" data-aos="fade-up" style="border-radius: 24px; overflow: hidden; box-shadow: 0 12px 35px rgba(183, 110, 121, 0.15); border: 4px solid var(--soft-pink);">
+            <iframe src="https://maps.google.com/maps?q=-0.479167,117.161407&hl=id&z=17&output=embed" width="100%" height="440" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+          </div>
+
+          <div style="margin-top: 2.2rem;" data-aos="zoom-in">
+            <a href="https://maps.app.goo.gl/rJ3RtqwUFH4141M26?g_st=aw" class="button btn-cta-custom" target="_blank">
+              <i class="fas fa-directions"></i> &nbsp; Buka Google Maps
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION GALERI MOMEN (HANYA FOTO & BINGKAI - TANPA KETERANGAN KISAH BERSAMA) -->
+      <section class="section-light regular-section" id="tentang-pasangan" style="padding: 4.5rem 1.5rem; background: var(--bright-white);">
+        <div class="container has-text-centered">
+          <div data-aos="fade-up">
+            <!-- SLOT HIASAN ASSET GALERI -->
+            <img src="image/divider-flower.png" class="ornament-header" alt="Hiasan Bunga" style="max-width: 140px;">
+            <h2 class="section-title">Galeri Foto</h2>
+          </div>
+        
+          <!-- 6 SLOT FOTO BERBINGKAI RESPONSIF PROPORTIONAL -->
+          <div class="columns is-multiline gallery-container" data-aos="fade-up">
+            
+            <!-- SLOT FOTO 1 -->
+            <div class="column is-4-desktop is-6-tablet">
+              <div class="gallery-frame-wrapper">
+                <div class="gallery-img-container">
+                  <img src="image/Foto1.jpeg" alt="Galeri Foto 1">
+                  <!-- SLOT ASSET OVERLAY BINGKAI PNG DAPAT DIISI/DIEDIT MANUAL: -->
+                  <!-- <img src="image/frame-asset-1.png" class="gallery-frame-overlay-asset" alt="Bingkai Asset"> -->
+                </div>
+              </div>
+            </div>
+
+            <!-- SLOT FOTO 2 -->
+            <div class="column is-4-desktop is-6-tablet">
+              <div class="gallery-frame-wrapper">
+                <div class="gallery-img-container">
+                  <img src="image/Foto2.jpeg" alt="Galeri Foto 2">
+                  <!-- <img src="image/frame-asset-2.png" class="gallery-frame-overlay-asset" alt="Bingkai Asset"> -->
+                </div>
+              </div>
+            </div>
+
+            <!-- SLOT FOTO 3 -->
+            <div class="column is-4-desktop is-6-tablet">
+              <div class="gallery-frame-wrapper">
+                <div class="gallery-img-container">
+                  <img src="image/Foto3.jpeg" alt="Galeri Foto 3">
+                  <!-- <img src="image/frame-asset-3.png" class="gallery-frame-overlay-asset" alt="Bingkai Asset"> -->
+                </div>
+              </div>
+            </div>
+
+            <!-- SLOT FOTO 4 -->
+            <div class="column is-4-desktop is-6-tablet">
+              <div class="gallery-frame-wrapper">
+                <div class="gallery-img-container">
+                  <img src="image/Foto4.jpeg" alt="Galeri Foto 4">
+                  <!-- <img src="image/frame-asset-4.png" class="gallery-frame-overlay-asset" alt="Bingkai Asset"> -->
+                </div>
+              </div>
+            </div>
+
+            <!-- SLOT FOTO 5 -->
+            <div class="column is-4-desktop is-6-tablet">
+              <div class="gallery-frame-wrapper">
+                <div class="gallery-img-container">
+                  <img src="image/Foto5.jpeg" alt="Galeri Foto 5">
+                  <!-- <img src="image/frame-asset-5.png" class="gallery-frame-overlay-asset" alt="Bingkai Asset"> -->
+                </div>
+              </div>
+            </div>
+
+            <!-- SLOT FOTO 6 -->
+            <div class="column is-4-desktop is-6-tablet">
+              <div class="gallery-frame-wrapper">
+                <div class="gallery-img-container">
+                  <img src="image/Foto6.jpeg" alt="Galeri Foto 6">
+                  <!-- <img src="image/frame-asset-6.png" class="gallery-frame-overlay-asset" alt="Bingkai Asset"> -->
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- SLOT HIASAN ASSET BAWAH GALERI -->
+          <div style="margin-top: 3rem;" data-aos="fade-up">
+            <img src="image/divider-leaves.png" class="ornament-divider" alt="Hiasan Pembatas">
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION AMPLOP DIGITAL KEDUA MEMPELAI TERPISAH -->
+      <section id="amplop-digital" style="padding: 4.5rem 1.5rem; background: var(--bg-pink-light);">
+        <div class="container has-text-centered" data-aos="fade-up">
+          <h2 class="section-title">Amplop Digital</h2>
+          <p class="section-subtitle">Tanda Kasih &amp; Doa Restu</p>
+          <p style="color: var(--text-muted); max-width: 620px; margin: 0 auto 2.8rem; line-height: 1.8; font-size: 1.02rem;">
+            Doa restu Anda merupakan hadiah terindah bagi kami. Bagi Bapak/Ibu/Saudara/i yang ingin memberikan tanda kasih secara digital, dapat mengirimkan melalui rekening masing-masing mempelai di bawah ini:
+          </p>
+
+          <div class="columns is-centered">
+            
+            <!-- REKENING MEMPELAI WANITA (ALFIYAH) -->
+            <div class="column is-5">
+              <div class="gift-card">
+                <i class="fas fa-credit-card" style="font-size: 2.4rem; color: var(--rose-gold); margin-bottom: 0.9rem;"></i>
+                <h3 class="gift-title">Amplop Mempelai Wanita</h3>
+                <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.3rem;">Bank BCA</p>
+                <p style="font-size: 1.35rem; font-weight: 700; color: var(--rose-gold-dark); letter-spacing: 1.2px;" id="rekening-alfiyah">1234567890</p>
+                <p style="font-size: 0.92rem; color: var(--text-muted);">a.n. Alfiyah</p>
+                <button class="btn-copy" onclick="copyRekening('7935723493', 'Alfiyah')">
+                  <i class="far fa-copy"></i> Salin Rekening Alfiyah
+                </button>
+              </div>
+            </div>
+
+            <!-- REKENING MEMPELAI PRIA (GEO SANDI ARDIAN) -->
+            <div class="column is-5">
+              <div class="gift-card">
+                <i class="fas fa-credit-card" style="font-size: 2.4rem; color: var(--rose-gold); margin-bottom: 0.9rem;"></i>
+                <h3 class="gift-title">Amplop Mempelai Pria</h3>
+                <p style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.3rem;">BRI</p>
+                <p style="font-size: 1.35rem; font-weight: 700; color: var(--rose-gold-dark); letter-spacing: 1.2px;" id="rekening-geosandi">0987654321</p>
+                <p style="font-size: 0.92rem; color: var(--text-muted);">a.n. Geo Sandi Ardian</p>
+                <button class="btn-copy" onclick="copyRekening('374801000710505', 'Geo Sandi Ardian')">
+                  <i class="far fa-copy"></i> Salin Rekening Geo Sandi
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION RSVP -->
+      <section class="section-dark contact" id="rsvp" style="padding: 4.5rem 1.5rem; background: var(--bright-white);">
+        <div class="container has-text-centered">
+          <div data-aos="fade-up">
+            <!-- SLOT HIASAN ASSET RSVP -->
+            <img src="image/divider-flower.png" class="ornament-header" alt="Hiasan Bunga" style="max-width: 130px;">
+            <h2 class="section-title">Konfirmasi Kehadiran</h2>
+            <p class="section-subtitle">RSVP WhatsApp</p>
+            <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 2.2rem; line-height: 1.8; font-size: 1.02rem;">
+              Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/Saudari berkenan hadir untuk memberikan doa restu.
+            </p>
+          </div>
+
+          <div data-aos="zoom-in" style="margin-bottom: 2.8rem;">
+            <a href="https://api.whatsapp.com/send?phone=6288704262067&text=Halo%20Alfiyah,%20saya%20akan%20datang%20di%20acara%20pernikahan" class="button btn-cta-custom" target="_blank" style="margin: 0.5rem;">
+              <i class="fab fa-whatsapp"></i> &nbsp; Alfiyah (088704262067)
+            </a>
+            
+            <a href="https://api.whatsapp.com/send?phone=628895656509&text=Halo%20Geo%20Sandi,%20saya%20akan%20datang%20di%20acara%20pernikahan" class="button btn-cta-custom" target="_blank" style="margin: 0.5rem;">
+              <i class="fab fa-whatsapp"></i> &nbsp; Geo Sandi A. (08895656509)
+            </a>
+          </div>
+
+          <div data-aos="fade-up">
+            <p style="font-size: 1.15rem; color: var(--text-dark); line-height: 1.85;">
+              Kami yang berbahagia,
+              <br>
+              <strong style="color: var(--rose-gold-dark);">Keluarga Bapak Wahid &amp; Ibu Hayati</strong>
+              <br>
+              <strong style="color: var(--rose-gold-dark);">Keluarga Bapak Damin &amp; Ibu Anik Suminem</strong>
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer" style="padding: 2.2rem 1.5rem; background: var(--bg-pink-light); border-top: 2px solid var(--soft-pink);">
+      <div class="container has-text-centered">
+        <p style="font-size: 0.88rem; color: var(--text-muted);">&copy; 2026 Pernikahan Alfiyah &amp; Geo Sandi Ardian. Crafted with Love.</p>
+      </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="js/menikah.js"></script>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        easing: "ease-out",
+        duration: 800,
+        once: true
+      });
+
+      // KONTROL COVER MODAL & AUTOPLAY MUSIK
+      function openInvitation() {
+        document.getElementById('cover-modal').classList.add('hide');
+        document.body.classList.remove('modal-open');
+        var music = document.getElementById('bg-music');
+        if (music) {
+          music.play().catch(function(e) { console.log('Autoplay blocked:', e); });
+        }
+      }
+
+      // KONTROL TOMBOL MUSIK
+      var isPlaying = true;
+      function toggleMusic() {
+        var music = document.getElementById('bg-music');
+        var btn = document.getElementById('music-btn');
+        if (isPlaying) {
+          music.pause();
+          btn.innerHTML = '<i class="fas fa-volume-mute"></i>';
+        } else {
+          music.play();
+          btn.innerHTML = '<i class="fas fa-music"></i>';
+        }
+        isPlaying = !isPlaying;
+      }
+
+      // FUNGSI SALIN REKENING
+      function copyRekening(nomor, pemilik) {
+        navigator.clipboard.writeText(nomor);
+        alert('Nomor rekening ' + pemilik + ' (' + nomor + ') berhasil disalin!');
+      }
+
+      // SCRIPT COUNTDOWN TIMER REALTIME
+      var targetDate = new Date("Dec 21, 2026 09:00:00").getTime();
+      var timerInterval = setInterval(function() {
+        var now = new Date().getTime();
+        var distance = targetDate - now;
+
+        if (distance < 0) {
+          clearInterval(timerInterval);
+          document.getElementById("cd-days").innerText = "00";
+          document.getElementById("cd-hours").innerText = "00";
+          document.getElementById("cd-minutes").innerText = "00";
+          document.getElementById("cd-seconds").innerText = "00";
+          return;
+        }
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("cd-days").innerText = days < 10 ? "0" + days : days;
+        document.getElementById("cd-hours").innerText = hours < 10 ? "0" + hours : hours;
+        document.getElementById("cd-minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
+        document.getElementById("cd-seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
+      }, 1000);
+    </script>
+  </body>
+</html>
